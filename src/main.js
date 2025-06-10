@@ -14,6 +14,7 @@ import App from "@/App.vue";
 
 import Admin from "@/layouts/Admin.vue";
 import Auth from "@/layouts/Auth.vue";
+import EventComponent from "@/layouts/EventComponent.vue";
 
 // views for Admin layout
 
@@ -31,67 +32,83 @@ import Register from "@/views/auth/Register.vue";
 
 import Landing from "@/views/Landing.vue";
 import Profile from "@/views/Profile.vue";
+import Event from "@/views/Event.vue";
 import Index from "@/views/Index.vue";
 
 // routes
 
 const routes = [
-  {
-    path: "/admin",
-    redirect: "/admin/dashboard",
-    component: Admin,
-    children: [
-      {
-        path: "/admin/dashboard",
-        component: Dashboard,
-      },
-      {
-        path: "/admin/settings",
-        component: Settings,
-      },
-      {
-        path: "/admin/tables",
-        component: Tables,
-      },
-      {
-        path: "/admin/maps",
-        component: Maps,
-      },
-    ],
-  },
-  {
-    path: "/auth",
-    redirect: "/auth/login",
-    component: Auth,
-    children: [
-      {
-        path: "/auth/login",
-        component: Login,
-      },
-      {
-        path: "/auth/register",
-        component: Register,
-      },
-    ],
-  },
-  {
-    path: "/landing",
-    component: Landing,
-  },
-  {
-    path: "/profile",
-    component: Profile,
-  },
-  {
-    path: "/",
-    component: Index,
-  },
-  { path: "/:pathMatch(.*)*", redirect: "/" },
+	{
+		path: "/admin",
+		redirect: "/admin/dashboard",
+		component: Admin,
+		children: [
+			{
+				path: "/admin/dashboard",
+				component: Dashboard,
+			},
+			{
+				path: "/admin/settings",
+				component: Settings,
+			},
+			{
+				path: "/admin/tables",
+				component: Tables,
+			},
+			{
+				path: "/admin/maps",
+				component: Maps,
+			},
+		],
+	},
+	{
+		path: "/auth",
+		redirect: "/auth/login",
+		component: Auth,
+		children: [
+			{
+				path: "/auth/login",
+				component: Login,
+			},
+			{
+				path: "/auth/register",
+				component: Register,
+			},
+		],
+	},
+	{
+		path: "/event",
+		redirect: "/event/cf25",
+		component: EventComponent,
+		children: [
+			{
+				path: "/event/cf25",
+				component: Event,
+			},
+		],
+	},
+	{
+		path: "/landing",
+		component: Landing,
+	},
+	{
+		path: "/profile",
+		component: Profile,
+	},
+	{
+		path: "/event",
+		component: Event,
+	},
+	{
+		path: "/",
+		component: Index,
+	},
+	{ path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+	history: createWebHistory(),
+	routes,
 });
 
 createApp(App).use(router).mount("#app");
