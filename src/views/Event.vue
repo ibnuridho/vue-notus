@@ -12,10 +12,10 @@
                     <span class="text-center text-2xl font-bold mb-6 text-white">24 JUNE 2025</span>
                 </div>
                 <hr>
-                <div class="relative flex flex-col min-w-0 w-full mb-6">
+                <!-- <div class="relative flex flex-col min-w-0 w-full mb-6">
                     <small class="text-center text-2xl font-bold mb-0 text-white">SEAT INFORMATION</small>
                     <span class="text-center text-4xl font-bold mb-0 text-white">{{ seatno }}</span>
-                </div>                
+                </div> -->
             </div>
         </div>
     </div>
@@ -27,8 +27,8 @@ export default {
     name: 'RealTimeComponent',
     data() {
         return {
-            name: 'customer_name',
-            company: 'company_name',
+            name: '________________',
+            company: '________________',
             seatno: 'A-000',
         };
     },

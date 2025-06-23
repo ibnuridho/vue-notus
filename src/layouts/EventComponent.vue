@@ -15,7 +15,7 @@
 import Navbar from "@/components/Navbars/EventNavbar.vue";
 // import FooterSmall from "@/components/Footers/FooterSmall.vue";
 
-import registerBg2 from "@/assets/img/5.jpg";
+import registerBg2 from "@/assets/img/5.png";
 
 export default {
     data() {
